@@ -188,7 +188,7 @@ exclude:
   - README.md
   - readme_preview/
   - vendor
-  - people.md # Excluded people page
+  - profiles.md # Excluded people page
 keep_files:
   - CNAME
   - .nojekyll
