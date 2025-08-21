@@ -1,3 +1,14 @@
+<script>
+  (function() {
+    var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (dark) {
+      document.documentElement.classList.add('dark-mode');
+    } else {
+      document.documentElement.classList.remove('dark-mode');
+    }
+  })();
+</script>
+
 <!-- Metadata, OpenGraph and Schema.org -->
 {% include metadata.liquid %}
 
