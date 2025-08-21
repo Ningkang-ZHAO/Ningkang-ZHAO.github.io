@@ -1,6 +1,4 @@
 // Has to be in the head tag, otherwise a flicker effect will occur.
-let themeSetting = determineComputedTheme();
-document.documentElement.setAttribute("data-theme-setting", themeSetting);
 
 // Toggle through light and dark theme settings.
 let toggleThemeSetting = () => {
