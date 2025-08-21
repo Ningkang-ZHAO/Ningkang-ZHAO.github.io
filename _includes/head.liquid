@@ -72,14 +72,6 @@
 {% if site.enable_darkmode %}
   <!-- Dark Mode -->
   <script src="{{ '/assets/js/theme.js' | relative_url | bust_file_cache }}"></script>
-  <script>
-      const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      {% if dark %}
-        document.documentElement.classList.add("dark-mode");
-      {% elseif %}
-        document.documentElement.classList.remove("dark-mode");
-      {% endif %}
-  </script>
   <link
     defer
     rel="stylesheet"
