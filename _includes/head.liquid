@@ -1,14 +1,3 @@
-<script>
-  (function() {
-    var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (dark) {
-      document.documentElement.classList.add('dark-mode');
-    } else {
-      document.documentElement.classList.remove('dark-mode');
-    }
-  })();
-</script>
-
 <!-- Metadata, OpenGraph and Schema.org -->
 {% include metadata.liquid %}
 
@@ -83,6 +72,14 @@
 {% if site.enable_darkmode %}
   <!-- Dark Mode -->
   <script src="{{ '/assets/js/theme.js' | relative_url | bust_file_cache }}"></script>
+  <script>
+      const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      {% if dark %}
+        document.documentElement.classList.add("dark-mode");
+      {% elseif %}
+        document.documentElement.classList.remove("dark-mode");
+      {% endif %}
+  </script>
   <link
     defer
     rel="stylesheet"
