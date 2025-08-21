@@ -269,7 +269,7 @@ let determineComputedTheme = () => {
   const userPref = window.matchMedia;
   if (userPref && userPref("(prefer-color-cheme:dark)").matches) {
     return "dark";
-  } else{
+  } else {
     return "light";
   }
 };
