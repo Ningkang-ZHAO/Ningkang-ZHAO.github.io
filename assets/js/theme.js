@@ -1,4 +1,6 @@
 // Has to be in the head tag, otherwise a flicker effect will occur.
+let themeSetting = determineComputedTheme();
+document.documentElement.setAttribute("data-theme-setting", themeSetting);
 
 // Toggle through light and dark theme settings.
 let toggleThemeSetting = () => {
@@ -267,7 +269,7 @@ let determineComputedTheme = () => {
     return themeSetting;
   }
   const userPref = window.matchMedia;
-  if (userPref && userPref("(prefer-color-cheme:dark)").matches) {
+  if (userPref && userPref("(prefers-color-cheme:dark)").matches) {
     return "dark";
   } else {
     return "light";
