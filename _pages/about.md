@@ -14,7 +14,7 @@ profile:
     <p style="display:grid;grid-template-columns:30px auto;gap:5px;align-items:center;margin:5px 0;"><i class="fa-brands fa-google-scholar" style="text-align:center;font-size:1.2em;"></i><a href='https://scholar.google.com/citations?user=ZZ2FEfAAAAAJ&hl=en'>Google Scholar</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+social: false # includes social icons at the bottom of the page
 
 announcements:
   enabled: true # includes a list of news items
