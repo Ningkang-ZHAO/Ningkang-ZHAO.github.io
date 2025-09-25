@@ -9,9 +9,9 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p style="display:grid;grid-template-columns:30px auto;align-items:center;margin:5px 0;"><i class="fa fa-mobile" style="text-align:center;font-size:1.2em;"></i>+8618771767338</p>
-    <p style="display:grid;grid-template-columns:30px auto;align-items:center;margin:5px 0;"><i class="fa fa-envelope" style="text-align:center;font-size:1.2em;"></i><a href='mailto:ningk.zhao@gmail.com'>Ningk.ZHAO@gmail.com</a></p>
-    <p style="display:grid;grid-template-columns:30px auto;align-items:center;margin:5px 0;"><i class="fa-brands fa-google-scholar" style="text-align:center;font-size:1.2em;"></i><a href='https://scholar.google.com/citations?user=ZZ2FEfAAAAAJ&hl=en'>Google Scholar</p>
+    <p style="display:grid;grid-template-columns:30px auto;gap:5px;align-items:center;margin:5px 0;"><i class="fa fa-mobile" style="text-align:center;font-size:1.2em;"></i>+8618771767338</p>
+    <p style="display:grid;grid-template-columns:30px auto;gap:5px;align-items:center;margin:5px 0;"><i class="fa fa-envelope" style="text-align:center;font-size:1.2em;"></i><a href='mailto:ningk.zhao@gmail.com'>Ningk.ZHAO@gmail.com</a></p>
+    <p style="display:grid;grid-template-columns:30px auto;gap:5px;align-items:center;margin:5px 0;"><i class="fa-brands fa-google-scholar" style="text-align:center;font-size:1.2em;"></i><a href='https://scholar.google.com/citations?user=ZZ2FEfAAAAAJ&hl=en'>Google Scholar</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
