@@ -190,6 +190,8 @@ exclude:
   - vendor
   - _pages/profiles.md # Excluded people page
   - _pages/dropdown.md # Excluded submenu part
+  - _pages/teaching.md # Excluded tearching page
+  - _pages/repositories.md # Excluded repositories page
 keep_files:
   - CNAME
   - .nojekyll
