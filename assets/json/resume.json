@@ -110,15 +110,23 @@
   ],
   "interests": [
     {
-      "name": "Physics",
+      "name": "Physics (Fission or Fusion)",
       "icon": "fa-solid fa-tag",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Nuclear Energy",
+        "Nuclear Physics",
+        "Heat Transfer"
+      ]
+    },
+    {
+      "name": "Materials",
+      "icon": "fa-solid fa-tag",
+      "keywords": [
+        "Materials Physics",
+        "Computational Materials",
+        "Metal Materials",
+        "Accident Tolerant Fuel",
+        "Plasma-Facing Materials"
       ]
     }
   ],
