@@ -32,16 +32,6 @@
       "startDate": "2022-09-01",
       "endDate": "2025-03-31",
       "courses": ["Nuclear Energy and Nuclear Technology Engineering"]
-    },
-    {
-      "institution": "Changsha University of Science and Technology",
-      "location": "Changsha, China",
-      "url": "https://www.csust.edu.cn/",
-      "area": "Electrical and Information Engineering",
-      "studyType": "Bachelor",
-      "startDate": "2017-09-01",
-      "endDate": "2021-06-30",
-      "courses": ["Electrical Engineering and Automation"]
     }
   ],
   "awards": [
