@@ -32,6 +32,16 @@
       "startDate": "2022-09-01",
       "endDate": "2025-03-31",
       "courses": ["Nuclear Energy and Nuclear Technology Engineering"]
+    },
+    {
+      "institution": "Changsha University of Science and Technology",
+      "location": "Changsha, China",
+      "url": "https://www.csust.edu.cn/",
+      "area": "Electrical and Information Engineering",
+      "studyType": "Bachelor",
+      "startDate": "2017-09-01",
+      "endDate": "2021-06-30",
+      "courses": ["Electrical Engineering and Automation"]
     }
   ],
   "awards": [
@@ -63,27 +73,27 @@
     {
       "title": "Second-Class Scholarship",
       "date": "2021-05",
-      "awarder": "Changsha University of Science & Technology"
+      "awarder": "Changsha University of Science \& Technology"
     },
     {
       "title": "Second Prize in Selection for \"Internet +\" Innovation and Entrepreneurship Competition",
       "date": "2020-05",
-      "awarder": "School of Electrical and Information Engineering, Changsha University of Science & Technology"
+      "awarder": "School of Electrical and Information Engineering, Changsha University of Science \& Technology"
     },
     {
       "title": "Third-Class Scholarship",
       "date": "2019-12",
-      "awarder": "Changsha University of Science & Technology"
+      "awarder": "Changsha University of Science \& Technology"
     },
     {
       "title": "Practice Exemplary Individual in \"Volunteer activities for the country people\"",
       "date": "2019-12",
-      "awarder": "Changsha University of Science & Technology"
+      "awarder": "Changsha University of Science \& Technology"
     },
     {
       "title": "Best Creative Award in \"Dianyuan Cup\" Campus Electronic Design Competition",
       "date": "2019-05",
-      "awarder": "School of Electrical and Information Engineering, Changsha University of Science & Technology"
+      "awarder": "School of Electrical and Information Engineering, Changsha University of Science \& Technology"
     }
   ],
   "languages": [
