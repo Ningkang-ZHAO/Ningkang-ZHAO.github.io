@@ -112,7 +112,11 @@
     {
       "name": "Physics (Fission or Fision)",
       "icon": "fa-solid fa-tag",
-      "keywords": ["Nuclear Energy", "Nuclear Physics", "Heat Transfer"]
+      "keywords": [
+        "Nuclear Energy", 
+        "Nuclear Physics", 
+        "Heat Transfer"
+      ]
     },
     {
       "name": "Materials",
