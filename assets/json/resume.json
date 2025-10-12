@@ -107,18 +107,5 @@
       "fluency": "Fluent",
       "icon": ""
     }
-  ],
-  "interests": [
-    {
-      "name": "Physics (Fission or Fusion)",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
   ]
 }
