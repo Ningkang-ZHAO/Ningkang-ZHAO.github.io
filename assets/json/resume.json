@@ -110,12 +110,15 @@
   ],
   "interests": [
     {
-      "name": "Physics Fission or Fusion",
+      "name": "Physics (Fission or Fusion)",
       "icon": "fa-solid fa-tag",
       "keywords": [
-        "Nuclear Energy",
-        "Nuclear Physics",
-        "Heat Transfer"
+        "Quantum Mechanics",
+        "Quantum Computing",
+        "Quantum Information",
+        "Quantum Cryptography",
+        "Quantum Communication",
+        "Quantum Teleportation"
       ]
     }
   ]
