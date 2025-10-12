@@ -1,24 +1,24 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Ningkang ZHAO",
+    "label": "Master in Energy and Power Engineering",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "Ningk.ZHAO@gmail.com",
+    "phone": "(+86) 18771767338",
+    "url": "https://ningkang-zhao.github.io/",
+    "summary": "A master with M.Eng. in Energy and Power Engineering from Shanghai Jiao Tong University",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
+      "address": "800 Dongchuan RD.",
+      "postalCode": "200240",
+      "city": "Shanghai",
+      "countryCode": "CN",
+      "region": "Minhang District"
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "network": "Google Scholar",
+        "username": "Ningkang Zhao",
+        "url": "https://scholar.google.com/citations?user=ZZ2FEfAAAAAJ&hl=en"
       }
     ]
   },
