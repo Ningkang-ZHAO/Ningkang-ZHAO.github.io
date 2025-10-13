@@ -264,8 +264,8 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Ningkang]
-  first_name: [Zhao]
+  last_name: [Zhao]
+  first_name: [Ningkang]
 
   style: apa
   locale: en
