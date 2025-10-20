@@ -42,14 +42,14 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
-          description: "",
-          section: "News",},{id: "news-my-first-review-paper-is-now-online-in-small-check-out-more-details-on-my-publications-page",
+            },},{id: "news-my-first-review-paper-is-now-online-in-small-check-out-more-details-on-my-publications-page",
           title: 'My first review paper is now online in Small! Check out more details...',
           description: "",
           section: "News",},{id: "news-i-have-officially-received-my-master-s-degree-in-energy-and-power-engineering-from-shanghai-jiao-tong-university",
           title: 'I have officially received my Master’s degree in Energy and Power Engineering from...',
+          description: "",
+          section: "News",},{id: "news-my-research-on-accident-tolerant-fuel-with-nanodiamond-coatings-has-been-published-in-small-you-can-find-the-doi-and-abstract-on-my-publications-page",
+          title: 'My research on accident tolerant fuel with nanodiamond coatings has been published in...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
