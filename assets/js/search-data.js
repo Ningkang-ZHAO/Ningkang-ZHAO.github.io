@@ -50,7 +50,7 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "news-my-first-review-paper-is-now-online-in-small-check-out-more-details-on-my-amp-lt-a-href-https-ningkang-zhao-github-io-publications-amp-gt-publications-amp-lt-a-amp-gt-page",
+          section: "News",},{id: "news-my-first-review-paper-is-now-online-in-small-check-out-more-details-on-my-publications-page",
           title: 'My first review paper is now online in Small! Check out more details...',
           description: "",
           section: "News",},{id: "projects-project-1",
