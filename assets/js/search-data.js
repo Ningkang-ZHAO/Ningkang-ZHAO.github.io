@@ -41,7 +41,7 @@ ninja.data = [{
         
           title: "Some rambling about my PhD application",
         
-        description: "some rambling",
+        description: "some rambling and some thinking",
         section: "Posts",
         handler: () => {
           
