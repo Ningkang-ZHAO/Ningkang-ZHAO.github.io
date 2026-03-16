@@ -23,6 +23,11 @@ hr {
   border-top: 1px solid var(--global-divider-color);
 }
 
+// about page - introduce myself
+.post article .clearfix {
+  font-size: 1.15rem;
+}
+
 table {
   td,
   th {
@@ -229,7 +234,7 @@ ul.task-list input[type="checkbox"] {
 
 .post-description {
   margin-bottom: 2rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
 
   a {
     color: inherit;
@@ -289,6 +294,7 @@ ul.task-list input[type="checkbox"] {
 
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
+    font-size: 1.2rem;
 
     &:hover {
       color: var(--global-hover-color);
@@ -299,6 +305,7 @@ ul.task-list input[type="checkbox"] {
     background-color: inherit;
     font-weight: bolder;
     color: var(--global-theme-color);
+    font-size: 1.2rem;
 
     &:hover {
       color: var(--global-hover-color);
@@ -1051,7 +1058,7 @@ progress::-moz-progress-bar {
     color: var(--global-text-color);
 
     &:hover {
-      color: var(--global-hover-color);
+      color: var(--global-hover-color); 
     }
   }
 
@@ -1071,12 +1078,12 @@ nav[data-toggle="toc"] {
   top: 5rem;
 
   .nav .nav > li > a {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
 
   .nav > li > a {
     color: var(--global-text-color);
-    font-size: 0.75rem;
+    font-size: 1rem;
 
     &:hover {
       color: var(--global-hover-color);
@@ -1087,7 +1094,7 @@ nav[data-toggle="toc"] {
   .nav-link.active {
     color: var(--global-theme-color);
     border-left-color: var(--global-theme-color);
-    font-size: 0.75rem;
+    font-size: 1rem;
 
     &:hover {
       color: var(--global-hover-color);
