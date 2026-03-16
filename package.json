@@ -1,6 +1,25 @@
 {
   "devDependencies": {
-    "@shopify/prettier-plugin-liquid": "1.4.0",
-    "prettier": "3.1.1"
-  }
+    "@shopify/prettier-plugin-liquid": "^1.4.0",
+    "prettier": "^3.1.1"
+  },
+  "name": "ningkang-zhao.github.io",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">",
+  "main": "purgecss.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ningkang-ZHAO/Ningkang-ZHAO.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Ningkang-ZHAO/Ningkang-ZHAO.github.io/issues"
+  },
+  "homepage": "https://github.com/Ningkang-ZHAO/Ningkang-ZHAO.github.io#readme"
 }
