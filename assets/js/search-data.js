@@ -37,11 +37,22 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-some-rambling-about-my-phd-application",
+        },{id: "post-self-learning-of-dft-1",
+        
+          title: "Self-learning of DFT (1)",
+        
+        description: "Record of my self-learning process of DFT",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Self-Learning-1/";
+          
+        },
+      },{id: "post-some-rambling-about-my-phd-application",
         
           title: "Some rambling about my PhD application",
         
-        description: "some rambling and some thinking",
+        description: "Some rambling and some thinking.",
         section: "Posts",
         handler: () => {
           
