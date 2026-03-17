@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Self-learning of DFT (1)
-date: 2026-3-17 09:30:00+0800
+date: 2026-3-17 09:30:00
 description: Record of my self-learning process of DFT
 tags: Record
 categories: Research
 ---
 
-# Density Functional Theory - A Partical Introduction
+# Density Functional Theory - A Practical Introduction
 
 ## Section 1 What is DFT
 
@@ -65,15 +65,3 @@ categories: Research
    2. Solve Kohn-Sham equation to find the single-particle wave function, $\psi(\mathbf{r})$
    3. Calculate the electron density, $n_{KS}(\mathbf{r})=2\sum_i\psi^*_i(\mathbf{r})\psi_i(\mathbf{r})$
    4. Compare the electron density, updated trial electron density or start step 2.
-
-```mermaid
-   graph LR
-   A[single-electron wave function]
-   B[electron density]
-   C[Hartree potential]
-   D[Kohn-Sham equation]
-   C--->D
-   B--->C
-   A--->B
-   D--->A
-```
