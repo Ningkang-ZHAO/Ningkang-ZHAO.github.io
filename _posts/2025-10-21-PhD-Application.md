@@ -2,7 +2,7 @@
 layout: post
 title: Some rambling about my PhD application
 date: 2025-10-21 14:30:00+0800
-description: some rambling and some thinking
+description: Some rambling and some thinking.
 tags: Pondering
 categories: Life
 ---
