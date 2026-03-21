@@ -52,22 +52,26 @@ For a formal guide, you can find it at [official guidance](https://learn.microso
 
 ## Exercise 1
 
-1. Creat `input.in`, here is mine:
+1. Creat `input.in`, here is mine (e.g. Simple Cubic):
 
 ```fortran
 &control
-    calculation = 'vc-relax'  ! different with relax, vc-relax will freely adjust the cell size
+    calculation = 'vc-relax'  ! vc-relax will freely adjust the cell size
     prefix = 'exercise.section_2.1_sc' ! name of the calculation
     outdir = './' ! output path
     pseudo_dir = '../UPF/' ! the path to the pseudopotential
 /
 &system
     ibrav = 1   ! cell parameters of sc (2-fcc, 4-hcp)
-    celldm(1) = 5.29     ! side length
+    celldm(1) = 5.3     ! side length
     nat = 1     ! number of atoms (simple cubic)
     ntyp = 1    ! number of the type of atom
-    ecutwfc = 40
-    ecutrho = 320
+    ecutwfc = 60
+    ecutrho = 480
+   input_dft = 'pbesol'
+    occupations = 'smearing'
+    smearing = 'mv'
+    degauss = 0.02
 /
 &electrons
     conv_thr = 1.0d-8
@@ -81,7 +85,7 @@ ATOMIC_SPECIES
 ATOMIC_POSITIONS {crystal}
     Pt  0.0 0.0 0.0
 K_POINTS {automatic}
-    8 8 8 0 0 0
+    12 12 12 0 0 0
 ```
 
 2. Run the calculation: `pw.x< input.in >output.out`
@@ -89,43 +93,25 @@ K_POINTS {automatic}
 
 ```fortran
 sc
-   total energy =  -210.21876740 Ry
+   total energy =  -210.26976540 Ry
 fcc
-   total energy =  -210.27012727 Ry
+   total energy =  -210.30964469 Ry
 hcp
-   total energy =  -420.57651567 Ry (for each atom, -210.288257835)
-```
-
-It seems that hcp is the most stable crystal structure, but don't forget that we used `vs-relax`, and we need to further analyze the **crystal structure**:
-
-```fortran
-sc
-   CELL_PARAMETERS (alat=  5.29000000)
-      0.939154325   0.000000000   0.000000000
-      0.000000000   0.939154325   0.000000000
-      0.000000000   0.000000000   0.939154325
-fcc
-   CELL_PARAMETERS (alat=  7.41000000)
-      -0.504043981  -0.000000000   0.504043981
-      0.000000000   0.504043981   0.504043981
-      -0.504043981   0.504043981  -0.000000000
-hcp
-   CELL_PARAMETERS (alat=  5.30000000)
-      1.013061018  -0.000000000  -0.000000000
-      -0.506530509   0.877336577  -0.000000000
-       0.000000000  -0.000000000   1.559217249
+   total energy =  -420.60960121 Ry (for each atom, -210.304800605)
 ```
 
 So we can get the table (the experimental data is obtained from [Springer Materials](https://materials.springer.com/isp/crystallographic/docs/sd_0250899)):
 
-| Structure  | Initial $a(nm)$ | Final $a(nm)$   | Final $c(nm)$   | $c/a$  | Energy($Ry/atom$) |
-| ---------- | --------------- | --------------- | --------------- | ------ | ----------------- |
-| SC         | 0.28            | 0.2629033117372 | -               | -      | -210.21876740     |
-| FCC        | 0.392           | 0.3952938509088 | -               | -      | -210.27012727     |
-| HCP        | 0.28            | 0.2841285636378 | 0.4373064894277 | 1.5391 | -210.288257835    |
-| Experiment | -               | 0.39235         | -               | -      | -                 |
+| Structure  | Initial $a(nm)$ | Final $a(nm)$ | Final $c(nm)$ | $c/a$ | Energy($Ry/atom$) |
+| ---------- | --------------- | ------------- | ------------- | ----- | ----------------- |
+| SC         | 0.28            | 0.25857729656 | -             | -     | -210.26976540     |
+| FCC        | 0.392           | 0.39165598084 | -             | -     | -210.30964469     |
+| HCP        | 0.28            | 0.27261677639 | 0.46971563967 | 1.723 | -210.304800605    |
+| Experiment | -               | 0.39235       | -             | -     | -                 |
 
-We found that although the energy of hcp is more stable, its structure undergoes a significant distortion (compared to the ideal $c/a = 1.667$), and at the same time, its stable energy does not differ greatly from that of FCC, so Pt tends to prefer the FCC arrangement.
+According to the calculation results, Pt prefers the FCC crystal structure. The optimized lattice constant of FCC Pt is 0.39166 nm, which agrees well with the experimental value of 0.39235 nm, with a deviation of only -0.18%.
+
+To ensure the reliability of the results, single-point energy calculations were performed using the optimized structures obtained from vc-relax. The single-point energies (**FCC: -210.30964116 Ry/atom**, **HCP: -210.304800565 Ry/atom**) are consistent with the final vc-relax energies, confirming that the calculations are well converged.
 
 # Exercise 2
 
