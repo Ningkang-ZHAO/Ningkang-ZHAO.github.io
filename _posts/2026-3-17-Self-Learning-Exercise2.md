@@ -18,7 +18,7 @@ I will present the details of my device first:
 - Installed RAM: 16.0 GB
 - System Type: 64-bit operating system, x64-based processor
 
-If you are familiar with WSL, or you are using Linux system, you can jump to [Quantum Espresso](#quantum-espresso).
+If you are familiar with WSL, or you are using Linux system, you can jump to [Quantum Espresso](#quantum-espresso-taking-serial-communication-as-an-example).
 
 # Windows Subsystem for Linux (WSL) and Ubuntu
 
@@ -33,7 +33,7 @@ For a formal guide, you can find it at [official guidance](https://learn.microso
 
 4. (Option) For better experience, you can use command `sudo apt update` and command `sudo apt upgrade` to update all the software.
 
-# Quantum Espresso (Taking serial communication as an example)<a id="quantum-espresso"></a>
+# Quantum Espresso (Taking serial communication as an example)
 
 1. Download `.tar.gz` source film:`http://www.quantum-espresso.org/` and decompress: <code>tar -zxvf <span style="color: red;"> qe-7.5.tar.gz </span></code>.
 
@@ -48,7 +48,7 @@ For a formal guide, you can find it at [official guidance](https://learn.microso
    - Compilation: `make all`
 4. (Option) If you want to use QW directly every time when you start Linux, open the file `~/.bashrc` and add the path to `./QE/bin` at the end of the file, e.g. `export PATH=~/QE-7.5/bin:$PATH`.
 
-# Results<a id="results"></a>
+# Results
 
 ## Exercise 1
 
@@ -56,36 +56,36 @@ For a formal guide, you can find it at [official guidance](https://learn.microso
 
 ```fortran
 &control
-    calculation = 'vc-relax'  ! vc-relax will freely adjust the cell size
-    prefix = 'exercise.section_2.1_sc' ! name of the calculation
-    outdir = './' ! output path
-    pseudo_dir = '../UPF/' ! the path to the pseudopotential
+calculation = 'vc-relax' ! vc-relax will freely adjust the cell size
+prefix = 'exercise.section_2.1_sc' ! name of the calculation
+outdir = './' ! output path
+pseudo_dir = '../UPF/' ! the path to the pseudopotential
 /
-&system
-    ibrav = 1   ! cell parameters of sc (2-fcc, 4-hcp)
-    celldm(1) = 5.3     ! side length
-    nat = 1     ! number of atoms (simple cubic)
-    ntyp = 1    ! number of the type of atom
-    ecutwfc = 60
-    ecutrho = 480
-   input_dft = 'pbesol'
-    occupations = 'smearing'
-    smearing = 'mv'
-    degauss = 0.02
+&system ibrav = 1 ! cell parameters of sc (2-fcc, 4-hcp)
+celldm(1) = 5.3 ! side length
+nat = 1 ! number of atoms (simple cubic)
+ntyp = 1 ! number of the type of atom
+ecutwfc = 60
+ecutrho = 480
+input_dft = 'pbesol'
+occupations = 'smearing'
+smearing = 'mv'
+degauss = 0.02
 /
 &electrons
-    conv_thr = 1.0d-8
+conv_thr = 1.0d-8
 /
 &ions
 /
 &cell
 /
 ATOMIC_SPECIES
-    Pt  195.084 pt_pbesol_v1.4.uspp.F.UPF
+Pt 195.084
+pt_pbesol_v1.4.uspp.F.UPF
 ATOMIC_POSITIONS {crystal}
-    Pt  0.0 0.0 0.0
+Pt 0.0 0.0 0.0
 K_POINTS {automatic}
-    12 12 12 0 0 0
+12 12 12 0 0 0
 ```
 
 2. Run the calculation: `pw.x< input.in >output.out`
@@ -93,11 +93,11 @@ K_POINTS {automatic}
 
 ```fortran
 sc
-   total energy =  -210.26976540 Ry
+total energy = -210.26976540 Ry
 fcc
-   total energy =  -210.30964469 Ry
+total energy = -210.30964469 Ry
 hcp
-   total energy =  -420.60960121 Ry (for each atom, -210.304800605)
+total energy = -420.60960121 Ry (for each atom, -210.304800605)
 ```
 
 So we can get the table (the experimental data is obtained from [Springer Materials](https://materials.springer.com/isp/crystallographic/docs/sd_0250899)):
@@ -115,4 +115,36 @@ To ensure the reliability of the results, single-point energy calculations were 
 
 # Exercise 2
 
-_**To be continued**_
+The process is similar to [Exercise 1](#exercise-1), so only the results are presented here.
+
+| Label       | a($nm$)       | b($nm$)       | c($nm$)       | c/a    |
+| ----------- | ------------- | ------------- | ------------- | ------ |
+| Calculation | 0.31827459983 | 0.31827459983 | 0.50312942604 | 1.5808 |
+| Experiment  | 0.31964       | 0.31964       | 0.50511       | 1.5802 |
+| Deviation   | -0.42%        | -0.42%        | -0.39%        | +0.04% |
+
+# Exercise 3
+
+The process is similar to [Exercise 1](#exercise-1), too. The differet is that the atoms' types and the positions need to be modified.
+
+Here is the calculation results:
+| Label | a($nm$) |
+| ----------- | ------------- |
+| Calculation | 0.33797257568 |
+| Experiment | 0.345 |
+| Deviation | -2.04% |
+
+Although the deviation seems a bit high, I found that some students from PSU obtained similar [result](https://sites.psu.edu/dftap/2018/01/).
+
+# Exercise 4
+
+The process is similar to [Exercise 3](#exercise-3). The differet is that the atoms' types and the positions need to be modified.
+
+Here is the calculation results:
+| Structure | a($nm$) | Energy (pre atom, $Ry/atom$)
+| ----------- | ------------- |---|
+| CsCl Structure | 0.33797257568 |-65.714723715|
+| NaCl Structure | 0.46528488001 |-65.541039335|
+|Experiment | 0.345 |- |
+
+From the _**Energy**_ result, we find that CsAl prefers the CsCl structure, and the _**Cell parameters**_ of the NaCl Structure deviate significantly from the experimental value.
