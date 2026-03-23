@@ -128,11 +128,12 @@ The process is similar to [Exercise 1](#exercise-1), so only the results are pre
 The process is similar to [Exercise 1](#exercise-1), too. The differet is that the atoms' types and the positions need to be modified.
 
 Here is the calculation results:
-| Label | a($nm$) |
+
+| Label       | a($nm$)       |
 | ----------- | ------------- |
 | Calculation | 0.33797257568 |
-| Experiment | 0.345 |
-| Deviation | -2.04% |
+| Experiment  | 0.345         |
+| Deviation   | -2.04%        |
 
 Although the deviation seems a bit high, I found that some students from PSU obtained similar [result](https://sites.psu.edu/dftap/2018/01/).
 
@@ -141,10 +142,11 @@ Although the deviation seems a bit high, I found that some students from PSU obt
 The process is similar to [Exercise 3](#exercise-3). The differet is that the atoms' types and the positions need to be modified.
 
 Here is the calculation results:
-| Structure | a($nm$) | Energy (pre atom, $Ry/atom$)
-| ----------- | ------------- |---|
-| CsCl Structure | 0.33797257568 |-65.714723715|
-| NaCl Structure | 0.46528488001 |-65.541039335|
-|Experiment | 0.345 |- |
+
+| Structure      | a($nm$)       | Energy (pre atom, $Ry/atom$) |
+| -------------- | ------------- | ---------------------------- |
+| CsCl Structure | 0.33797257568 | -65.714723715                |
+| NaCl Structure | 0.46528488001 | -65.541039335                |
+| Experiment     | 0.345         | -                            |
 
 From the _**Energy**_ result, we find that CsAl prefers the CsCl structure, and the _**Cell parameters**_ of the NaCl Structure deviate significantly from the experimental value.
