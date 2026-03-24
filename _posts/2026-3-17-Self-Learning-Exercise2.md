@@ -65,8 +65,8 @@ pseudo_dir = '../UPF/' ! the path to the pseudopotential
 celldm(1) = 5.3 ! side length
 nat = 1 ! number of atoms (simple cubic)
 ntyp = 1 ! number of the type of atom
-ecutwfc = 60
-ecutrho = 480
+ecutwfc = 50
+ecutrho = 400
 input_dft = 'pbesol'
 occupations = 'smearing'
 smearing = 'mv'
@@ -93,7 +93,7 @@ K_POINTS {automatic}
 
 ```fortran
 sc
-total energy = -210.26976540 Ry
+total energy = -210.26936190 Ry
 fcc
 total energy = -210.30964469 Ry
 hcp
@@ -104,7 +104,7 @@ So we can get the table (the experimental data is obtained from [Springer Materi
 
 | Structure  | Initial $a(nm)$ | Final $a(nm)$ | Final $c(nm)$ | $c/a$ | Energy($Ry/atom$) |
 | ---------- | --------------- | ------------- | ------------- | ----- | ----------------- |
-| SC         | 0.28            | 0.25857729656 | -             | -     | -210.26976540     |
+| SC         | 0.28            | 0.25853780359 | -             | -     | -210.26936190     |
 | FCC        | 0.392           | 0.39165598084 | -             | -     | -210.30964469     |
 | HCP        | 0.28            | 0.27261677639 | 0.46971563967 | 1.723 | -210.304800605    |
 | Experiment | -               | 0.39235       | -             | -     | -                 |
