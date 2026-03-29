@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Self-learning of DFT: Section2 - Exercise Part of Section 2
-date: 2026-3-17 23:30:00+0800
+title: "Self-learning of DFT: Section2 - Exercise Part of Section 2"
+date: 2026-03-17 23:30:00+0800
 description: Record of my self-learning process of DFT
 tags: Record
 categories: Research
