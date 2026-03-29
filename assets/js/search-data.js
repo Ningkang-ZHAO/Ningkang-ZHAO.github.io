@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-self-learning-of-dft-2-exercise-part-of-section-2",
+        },{id: "post-self-learning-of-dft-3",
+        
+          title: "Self-learning of DFT (3)",
+        
+        description: "Record of my self-learning process of DFT",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Self-Learning-3/";
+          
+        },
+      },{id: "post-self-learning-of-dft-2-exercise-part-of-section-2",
         
           title: "Self-learning of DFT (2) - Exercise Part of Section 2",
         
@@ -81,12 +92,7 @@ ninja.data = [{
             window.location.href = "/blog/2025/PhD-Application/";
           
         },
-      },{id: "books-the-godfather",
-          title: 'The Godfather',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather/";
-            },},{id: "news-my-first-review-paper-is-now-online-in-small-check-out-more-details-on-my-publications-page",
+      },{id: "news-my-first-review-paper-is-now-online-in-small-check-out-more-details-on-my-publications-page",
           title: 'My first review paper is now online in Small! Check out more details...',
           description: "",
           section: "News",},{id: "news-i-have-officially-received-my-master-s-degree-in-energy-and-power-engineering-from-shanghai-jiao-tong-university",
