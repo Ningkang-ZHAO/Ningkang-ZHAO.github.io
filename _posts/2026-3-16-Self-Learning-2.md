@@ -21,9 +21,9 @@ categories: Research
    3. cell vector:
 
    $$
-       \mathbf{a_1}=a(\frac{1}{2}, \frac{1}{2}, 0)
-       \mathbf{a_2}=a(0, \frac{1}{2}, \frac{1}{2})
-       \mathbf{a_3}=a(\frac{1}{2}, 0, \frac{1}{2})
+      \mathbf{a_1}=a(\frac{1}{2}, \frac{1}{2}, 0)
+      \mathbf{a_2}=a(0, \frac{1}{2}, \frac{1}{2})
+      \mathbf{a_3}=a(\frac{1}{2}, 0, \frac{1}{2})
    $$
    4. distance between nearest-neighbor atoms: $\frac{a}{\sqrt 2}$
 
