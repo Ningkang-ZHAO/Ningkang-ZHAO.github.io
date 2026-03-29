@@ -455,9 +455,9 @@ _**<u style="color:var(--global-theme-color)">Reference Results:</u>**_
 
 For a multidimensional calculation of Newton's method, we can use similar stopping criterion, for example:
 
-- Gradient: $ |\nabla f(\mathbf{x}\_k)| < \varepsilon $
-- Similar root: $ |\mathbf{x*{k+1}-x*{k}}| < \varepsilon $
-- Function value: $ |f(\mathbf{x*{k+1}}) - f(\mathbf{x*{k}})| < \varepsilon $
+- Gradient:$\lvert \nabla f(\mathbf{x_k}) \rvert < \varepsilon$
+- Similar root: $\lvert \mathbf{x_{k+1}}-\mathbf{x}_{k} \rvert < \varepsilon$
+- Function value: $\lvert f(\mathbf{x_{k+1}}) - f(\mathbf{x}_k) \rvert < \varepsilon$
 - Iteration: $ k \geq k\_{maximum}$
 
 ---
@@ -473,7 +473,7 @@ To process molecular calculation with DFT based on periodic supercells, we can:
     - Place two atoms in the super cell with fractional coordinates $(0, 0, 0)$ and $(+d/L, 0, 0)$, where $L$ is considerably longer than $d$.
 2.  fixing the size and shape of the supercell but allowing the fractional coordinates of the atoms to vary.
 3.  define the stopping criterion
-    - The magnitude of the forces on the two atoms is less than $0.01 eV/\AA$
+    - The magnitude of the forces on the two atoms is less than $0.01 eV/Å$
 4.  choose the initial position of atoms
 5.  choose an initial bond angle
 
