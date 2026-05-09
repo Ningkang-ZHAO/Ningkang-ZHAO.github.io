@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-self-learning-of-dft-section-3",
+        },{id: "post-self-learning-of-dft-section-4",
+        
+          title: "Self-learning of DFT: Section 4",
+        
+        description: "Record of my self-learning process of DFT",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Self-Learning-4/";
+          
+        },
+      },{id: "post-self-learning-of-dft-section-3",
         
           title: "Self-learning of DFT: Section 3",
         
