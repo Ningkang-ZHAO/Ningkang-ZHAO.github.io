@@ -141,7 +141,7 @@ categories: Research
 
 ## Exercise & Results
 
-##### 1. In the exercises for Chapter 2 we suggested calculations for several materials, including Pt in the cubic and fcc crystal structures and ScAl in the CsCl structure. Repeat these calculations, this time developing numerical evidence that your results are well converged in terms of sampling $k$ space and energy cutoff.
+##### 1. In the exercises for Chapter 2 we suggested calculations for several materials, including Pt in the cubic and fcc crystal structures and ScAl in the CsCl structure. Repeat these calculations, this time developing numerical evidence that your results are well converged in terms of sampling $k$ space and energy cutoff. <span id="Pt_calculation"></span>
 
 _**<u style="color:var(--global-theme-color)">Reference Results:</u>**_
 

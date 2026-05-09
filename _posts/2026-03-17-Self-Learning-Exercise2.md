@@ -113,6 +113,8 @@ According to the calculation results, Pt prefers the FCC crystal structure. The 
 
 To ensure the reliability of the results, single-point energy calculations were performed using the optimized structures obtained from vc-relax. The single-point energies (**FCC: -210.30964116 Ry/atom**, **HCP: -210.304800565 Ry/atom**) are consistent with the final vc-relax energies, confirming that the calculations are well converged.
 
+---
+
 ## Exercise 2
 
 The process is similar to [Exercise 1](#exercise-1), so only the results are presented here.
@@ -122,6 +124,8 @@ The process is similar to [Exercise 1](#exercise-1), so only the results are pre
 | Calculation | 0.31827459983 | 0.31827459983 | 0.50312942604 | 1.5808 |
 | Experiment  | 0.31964       | 0.31964       | 0.50511       | 1.5802 |
 | Deviation   | -0.42%        | -0.42%        | -0.39%        | +0.04% |
+
+---
 
 ## Exercise 3
 
@@ -136,6 +140,8 @@ Here is the calculation results:
 | Deviation   | -2.04%        |
 
 Although the deviation seems a bit high, I found that some students from PSU obtained similar [result](https://sites.psu.edu/dftap/2018/01/).
+
+---
 
 ## Exercise 4
 
