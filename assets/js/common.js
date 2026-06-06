@@ -25,10 +25,35 @@ $(document).ready(function () {
     });
     var navSelector = "#toc-sidebar";
     var $myNav = $(navSelector);
+    var getTocActivationLine = function () {
+      var navbarHeight = $(".navbar.fixed-top").outerHeight() || 56;
+      return navbarHeight + Math.min($(window).height() * 0.3, 180);
+    };
+    $myNav.empty();
     Toc.init($myNav);
-    $("body").scrollspy({
-      target: navSelector,
-    });
+    var updateTocActiveLink = function () {
+      var activationLine = getTocActivationLine();
+      var activeId = null;
+
+      $myNav.find(".nav-link").each(function () {
+        var targetId = $(this).attr("href");
+        var target = targetId && document.querySelector(targetId);
+
+        if (target && target.getBoundingClientRect().top <= activationLine) {
+          activeId = targetId;
+        }
+      });
+
+      if (!activeId) {
+        activeId = $myNav.find(".nav-link").first().attr("href");
+      }
+
+      $myNav.find(".nav-link").removeClass("active");
+      $myNav.find('.nav-link[href="' + activeId + '"]').addClass("active");
+    };
+
+    updateTocActiveLink();
+    $(window).on("load scroll resize", updateTocActiveLink);
   }
 
   // add css to jupyter notebooks

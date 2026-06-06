@@ -1075,8 +1075,9 @@ progress::-moz-progress-bar {
 }
 
 /* Table of Contents */
-nav[data-toggle="toc"] {
+#toc-sidebar {
   top: 5rem;
+  z-index: 1;
 
   .nav .nav > li > a {
     font-size: 1rem;
@@ -1107,10 +1108,8 @@ nav[data-toggle="toc"] {
 /* small screens */
 @media (max-width: 576px) {
   /* override stickyness so that the navigation does not follow scrolling */
-  nav[data-toggle="toc"] {
-    visibility: hidden;
-    height: 0;
-    top: 0;
+  #toc-sidebar {
+    display: none;
   }
 }
 
@@ -1149,10 +1148,6 @@ nav[data-toggle="toc"] {
 .medium-zoom-overlay,
 .medium-zoom-image--opened {
   z-index: 999;
-}
-
-#toc-sidebar {
-  z-index: 1;
 }
 
 .echarts {

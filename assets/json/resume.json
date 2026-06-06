@@ -96,15 +96,15 @@
       "awarder": "School of Electrical and Information Engineering, Changsha University of Science & Technology"
     }
   ],
-  "languages": [
+  "skills": [
     {
-      "language": "Chinese",
-      "fluency": "Native speaker",
+      "name": "Programming Skills",
+      "keywords": ["Python", "MATLAB", "C", "Quantum Espresso"],
       "icon": ""
     },
     {
-      "language": "English",
-      "fluency": "Fluent",
+      "name": "Communication Language",
+      "keywords": ["English", "Chinese"],
       "icon": ""
     }
   ]
