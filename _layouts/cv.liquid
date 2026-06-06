@@ -32,7 +32,7 @@ layout: default
           <a class="anchor" id="{{ entry.title }}"></a>
           <div class="card mt-3 p-3">
             <h3 class="card-title font-weight-medium">{{ entry.title }}</h3>
-            <div>
+            <div class="justified-text">
               {% if entry.type == 'list' %}
                 {% include cv/list.liquid %}
               {% elsif entry.type == 'map' %}
@@ -88,7 +88,7 @@ layout: default
           {% if data[0] == 'meta' or data[1].size == 0 %} {% continue %} {% endif %}
           <div class="card mt-3 p-3">
             <h3 id="{{ data[0] }}" class="card-title font-weight-medium">{{ data[0] | capitalize }}</h3>
-            <div>
+            <div class="justified-text">
               {% case data[0] %}
                 {% when 'basics' %}
                   {% include resume/basics.liquid %}

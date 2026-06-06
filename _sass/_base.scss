@@ -3,6 +3,45 @@
  ******************************************************************************/
 
 // Typography
+.justified-text {
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphenate-limit-chars: 10 4 4;
+  -webkit-hyphenate-limit-before: 4;
+  -webkit-hyphenate-limit-after: 4;
+  -webkit-hyphenate-limit-lines: 2;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.justified-text pre,
+.justified-text code,
+.justified-text table,
+.justified-text mjx-container,
+.justified-text .MathJax,
+.justified-text .highlight,
+.plain-text {
+  text-align: left;
+  hyphens: manual;
+  -webkit-hyphens: manual;
+  overflow-wrap: normal;
+}
+
+.justified-text a {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 576px) {
+  .justified-text {
+    hyphenate-limit-chars: 6 3 3;
+    -webkit-hyphenate-limit-before: 3;
+    -webkit-hyphenate-limit-after: 3;
+    -webkit-hyphenate-limit-lines: 3;
+  }
+}
 
 p,
 h1,
@@ -742,9 +781,6 @@ footer.sticky-bottom {
 
     li {
       margin-bottom: 1rem;
-
-      .preview {
-      }
 
       .abbr {
         margin-bottom: 0.5rem;
