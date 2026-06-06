@@ -51,7 +51,7 @@ posts_in_search: true
 bib_search: true
 
 # Dimensions
-max_width: 1140px # maximum width of the main content (e.g., blog posts, project descriptions, etc.)
+max_width: clamp(1140px, 72vw, 1680px) # maximum width of the main content (e.g., blog posts, project descriptions, etc.)
 
 # TODO: add layout settings (single page vs. multi-page)
 
