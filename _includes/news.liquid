@@ -1,16 +1,17 @@
 <div class="news">
   {% if site.news != blank %}
+    {% assign news_settings = page.news | default: page.announcements %}
     {% assign news_size = site.news | size %}
     <div
       class="table-responsive"
-      {% if include.limit and page.announcements.scrollable and news_size > 3 %}
+      {% if include.limit and news_settings.scrollable and news_size > 3 %}
         style="max-height: 60vw"
       {% endif %}
     >
       <table class="table table-sm table-borderless">
         {% assign news = site.news | reverse %}
-        {% if include.limit and page.announcements.limit %}
-          {% assign news_limit = page.announcements.limit %}
+        {% if include.limit and news_settings.limit %}
+          {% assign news_limit = news_settings.limit %}
         {% else %}
           {% assign news_limit = news_size %}
         {% endif %}

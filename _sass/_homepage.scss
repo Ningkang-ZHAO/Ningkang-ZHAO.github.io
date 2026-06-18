@@ -3,7 +3,7 @@
  ******************************************************************************/
 
 .home-profile {
-  max-width: 1220px;
+  max-width: clamp(1220px, 86vw, 1680px);
   margin-top: -0.5rem;
   margin-right: auto;
   margin-left: auto;
@@ -150,7 +150,7 @@ html[data-theme="dark"] .home-panel {
 .home-focus__intro,
 .home-focus__item {
   min-height: 7.25rem;
-  padding: 1.05rem 1.25rem;
+  padding: 1rem 1.05rem;
 }
 
 .home-focus__intro {
@@ -167,7 +167,7 @@ html[data-theme="dark"] .home-panel {
     color: var(--global-text-color-light);
     font-size: 0.95rem;
     line-height: 1.55;
-    word-spacing: -0.04em;
+    word-spacing: -0.1em;
     text-align: justify;
     text-align-last: left;
     text-justify: inter-word;
@@ -177,21 +177,23 @@ html[data-theme="dark"] .home-panel {
     hyphenate-limit-chars: 6 3 3;
     -webkit-hyphenate-limit-before: 3;
     -webkit-hyphenate-limit-after: 3;
+    -webkit-hyphenate-limit-lines: 2;
   }
 }
 
 .home-focus__item {
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1rem;
+  grid-template-columns: 2.15rem minmax(0, 1fr);
+  gap: 0.75rem;
   align-items: start;
   border-left: 1px solid var(--global-divider-color);
 
   > i {
     margin-top: 0.15rem;
     color: var(--global-theme-color);
-    font-size: 2.2rem;
+    font-size: 1.95rem;
     line-height: 1;
+    text-align: center;
   }
 
   h3 {
@@ -205,7 +207,7 @@ html[data-theme="dark"] .home-panel {
     color: var(--global-text-color-light);
     font-size: 0.92rem;
     line-height: 1.45;
-    word-spacing: -0.04em;
+    word-spacing: -0.1em;
     text-align: justify;
     text-align-last: left;
     text-justify: inter-word;
@@ -215,22 +217,23 @@ html[data-theme="dark"] .home-panel {
     hyphenate-limit-chars: 6 3 3;
     -webkit-hyphenate-limit-before: 3;
     -webkit-hyphenate-limit-after: 3;
+    -webkit-hyphenate-limit-lines: 2;
   }
 }
 
 .home-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.16fr) minmax(0, 1fr) minmax(0, 1fr);
-  gap: 1rem;
+  grid-template-columns: minmax(0, 1.32fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.1rem;
   align-items: stretch;
 }
 
 .home-panel {
   min-width: 0;
   border: 1px solid var(--global-divider-color);
-  border-radius: 0.45rem;
+  border-radius: 0.55rem;
   background: var(--global-card-bg-color);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.045);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.045);
 }
 
 .home-panel__header {
@@ -238,15 +241,15 @@ html[data-theme="dark"] .home-panel {
   align-items: center;
   justify-content: space-between;
   gap: 0.85rem;
-  padding: 0.95rem 1rem 0.7rem;
+  padding: 1.05rem 1.15rem 0.85rem;
 
   h2 {
     position: relative;
     min-width: 0;
     margin: 0;
-    padding-left: 0.65rem;
-    font-size: 1.2rem;
-    font-weight: 600;
+    padding-left: 0.75rem;
+    font-size: 1.22rem;
+    font-weight: 650;
     white-space: nowrap;
 
     &::before {
@@ -274,17 +277,33 @@ html[data-theme="dark"] .home-panel {
   }
 }
 
+.home-panel--papers {
+  border-left: 3px solid var(--global-theme-color);
+}
+
+.home-panel--news,
+.home-panel--papers,
+.home-panel--posts {
+  background: linear-gradient(180deg, rgba($hermesog-color, 0.035), rgba($hermesog-color, 0) 8rem), var(--global-card-bg-color);
+}
+
+html[data-theme="dark"] .home-panel--news,
+html[data-theme="dark"] .home-panel--papers,
+html[data-theme="dark"] .home-panel--posts {
+  background: linear-gradient(180deg, rgba($cyan-color, 0.08), rgba($cyan-color, 0) 8rem), var(--global-card-bg-color);
+}
+
 .home-panel .publications {
   margin: 0;
-  padding: 0 1rem 1rem;
+  padding: 0 1.15rem 1.15rem;
 
   ol.bibliography {
     margin: 0;
 
     li {
       margin-bottom: 0.35rem;
-      padding: 0.8rem 0;
-      border-top: 1px solid var(--global-divider-color);
+      padding: 1rem 0;
+      border-top: 0;
 
       &:first-child {
         border-top: 0;
@@ -304,9 +323,9 @@ html[data-theme="dark"] .home-panel {
     }
 
     li .abbr {
-      flex: 0 0 7.2rem;
-      max-width: 7.2rem;
-      margin-right: 0.9rem;
+      flex: 0 0 8.2rem;
+      max-width: 8.2rem;
+      margin-right: 1rem;
 
       abbr {
         margin-bottom: 0.35rem;
@@ -315,7 +334,7 @@ html[data-theme="dark"] .home-panel {
 
       .preview {
         width: 100%;
-        max-height: 6rem;
+        max-height: 7.1rem;
         object-fit: cover;
       }
     }
@@ -326,16 +345,16 @@ html[data-theme="dark"] .home-panel {
     }
 
     li .title {
-      margin-bottom: 0.25rem;
-      font-size: 1rem;
-      line-height: 1.35;
+      margin-bottom: 0.35rem;
+      font-size: 1.06rem;
+      line-height: 1.34;
     }
 
     li .author,
     li .periodical {
       color: var(--global-text-color-light);
-      font-size: 0.86rem;
-      line-height: 1.35;
+      font-size: 0.91rem;
+      line-height: 1.42;
       text-align: justify;
       text-align-last: left;
       text-justify: inter-word;
@@ -344,11 +363,17 @@ html[data-theme="dark"] .home-panel {
     }
 
     li .links {
-      margin-top: 0.35rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      align-items: center;
+      margin-top: 0.5rem;
 
       a.btn {
-        padding: 0.17rem 0.65rem;
+        margin: 0;
+        padding: 0.18rem 0.65rem;
         border-color: var(--global-divider-color);
+        border-radius: 999px;
         color: var(--global-theme-color);
         font-size: 0.78rem;
 
@@ -361,7 +386,7 @@ html[data-theme="dark"] .home-panel {
 }
 
 .home-panel .news {
-  padding: 0 1rem 1rem;
+  padding: 0 1.15rem 1.15rem;
 
   .table-responsive {
     max-height: none !important;
@@ -369,19 +394,46 @@ html[data-theme="dark"] .home-panel {
 
   table {
     margin: 0;
+    border-collapse: separate;
   }
 
   tr {
+    position: relative;
     display: grid;
-    grid-template-columns: 6.6rem minmax(0, 1fr);
-    gap: 0.85rem;
+    grid-template-columns: 5.35rem minmax(0, 1fr);
+    gap: 0.95rem;
     align-items: start;
-    padding: 0.8rem 0;
-    border-top: 1px solid var(--global-divider-color);
+    padding: 0.95rem 0 0.95rem 1rem;
+    border-top: 0;
 
     &:first-child {
-      border-top: 0;
       padding-top: 0;
+    }
+
+    &::before {
+      position: absolute;
+      top: 1.1rem;
+      bottom: -1rem;
+      left: 0.22rem;
+      width: 1px;
+      background: var(--global-divider-color);
+      content: "";
+    }
+
+    &::after {
+      position: absolute;
+      top: 1.25rem;
+      left: 0;
+      width: 0.48rem;
+      height: 0.48rem;
+      border: 2px solid var(--global-theme-color);
+      border-radius: 50%;
+      background: var(--global-card-bg-color);
+      content: "";
+    }
+
+    &:last-child::before {
+      display: none;
     }
   }
 
@@ -396,8 +448,11 @@ html[data-theme="dark"] .home-panel {
   }
 
   th {
+    padding-top: 0.02rem;
     color: var(--global-theme-color);
+    font-size: 0.86rem;
     font-weight: 500;
+    letter-spacing: 0.01em;
     text-transform: uppercase;
     white-space: nowrap;
   }
@@ -405,6 +460,8 @@ html[data-theme="dark"] .home-panel {
   td,
   td p {
     color: var(--global-text-color);
+    font-size: 0.95rem;
+    line-height: 1.58;
     text-align: justify;
     text-align-last: left;
     text-justify: inter-word;
@@ -421,15 +478,12 @@ html[data-theme="dark"] .home-panel {
 .home-posts {
   display: grid;
   gap: 0;
-  padding: 0 1rem 1rem;
+  padding: 0 1.15rem 1.15rem;
 }
 
 .home-posts__item {
-  display: grid;
-  grid-template-columns: 6.6rem minmax(0, 1fr);
-  gap: 0.85rem;
-  align-items: start;
-  padding: 0.85rem 0;
+  display: block;
+  padding: 1rem 0;
   border-top: 1px solid var(--global-divider-color);
 
   &:first-child {
@@ -438,18 +492,26 @@ html[data-theme="dark"] .home-panel {
   }
 
   time {
+    display: inline-flex;
+    margin-bottom: 0.32rem;
     color: var(--global-theme-color);
-    font-size: 0.96rem;
+    font-size: 0.78rem;
     font-weight: 500;
-    line-height: 1.5;
+    letter-spacing: 0.02em;
+    line-height: 1.35;
     text-transform: uppercase;
     white-space: nowrap;
   }
 
   p {
-    margin: 0.25rem 0 0;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    margin: 0.3rem 0 0;
     color: var(--global-text-color);
-    font-size: 0.96rem;
+    font-size: 0.94rem;
     line-height: 1.5;
     text-align: justify;
     text-align-last: left;
@@ -461,9 +523,9 @@ html[data-theme="dark"] .home-panel {
 
 .home-posts__title {
   color: var(--global-text-color) !important;
-  font-size: 0.96rem;
-  font-weight: 600;
-  line-height: 1.45;
+  font-size: 1.03rem;
+  font-weight: 650;
+  line-height: 1.38;
 }
 
 .home-posts__meta {
@@ -476,6 +538,7 @@ html[data-theme="dark"] .home-panel {
     border: 1px solid var(--global-divider-color);
     border-radius: 999px;
     color: var(--global-text-color-light);
+    background: var(--global-bg-color);
     font-size: 0.72rem;
     line-height: 1;
     padding: 0.22rem 0.45rem;

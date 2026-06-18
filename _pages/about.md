@@ -2,9 +2,8 @@
 layout: about
 title: Home
 permalink: /
-subtitle: <a href='https://www.sjtu.edu.cn/'>Shanghai Jiao Tong University (Graduated)</a>. Shanghai, China.
 homepage_variant: research-profile
-hero_status: Open to PhD opportunities
+hero_status: Open to Ph.D. opportunities
 hero_affiliation: Shanghai Jiao Tong University
 location: Shanghai, China
 degree: M.Eng. Energy and Power Engineering
@@ -21,7 +20,7 @@ research_focus:
     description: Fabrication and application of nanodiamond coatings for nuclear materials and extreme environments.
   - title: Surface modification
     icon: fa-solid fa-gears
-    description: Surface engineering for high-performance heat transfer and oxidation resistance enhancement.
+    description: Surface engineering for high temperature quenching and oxidation resistance enhancement.
 
 profile:
   align: right
@@ -43,7 +42,7 @@ news:
 latest_posts:
   enabled: true
   scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  limit: 4 # leave blank to include all the blog posts
 ---
 
 I am Ningkang ZHAO, a researcher passionate about advancing materials science. I earned my M.Eng. in **Energy and Power Engineering** from **[Shanghai Jiao Tong University](https://www.sjtu.edu.cn/)**, where I focused on accident tolerant fuel(ATF) and development of computational tools to understand their properties and behaviors.

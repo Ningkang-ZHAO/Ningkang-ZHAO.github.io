@@ -73,15 +73,16 @@
     {% if page.selected_papers %}
       <div class="home-panel home-panel--papers">
         <div class="home-panel__header">
-          <h2>Selected Papers</h2>
+          <h2>Papers</h2>
           <a href="{{ '/publications/' | relative_url }}">View all publications <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
         </div>
         {% include selected_papers.liquid %}
       </div>
     {% endif %}
 
-    {% if page.news and page.news.enabled %}
-      <div class="home-panel">
+    {% assign news_settings = page.news | default: page.announcements %}
+    {% if news_settings and news_settings.enabled %}
+      <div class="home-panel home-panel--news">
         <div class="home-panel__header">
           <h2>News</h2>
           <a href="{{ '/news/' | relative_url }}">View all news <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
@@ -91,7 +92,7 @@
     {% endif %}
 
     {% if page.latest_posts and page.latest_posts.enabled %}
-      <div class="home-panel">
+      <div class="home-panel home-panel--posts">
         <div class="home-panel__header">
           <h2>Latest Posts</h2>
           <a href="{{ '/blog/' | relative_url }}">View all posts <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
