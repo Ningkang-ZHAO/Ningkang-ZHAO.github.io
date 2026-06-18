@@ -167,11 +167,16 @@ html[data-theme="dark"] .home-panel {
     color: var(--global-text-color-light);
     font-size: 0.95rem;
     line-height: 1.55;
+    word-spacing: -0.04em;
     text-align: justify;
     text-align-last: left;
     text-justify: inter-word;
     hyphens: auto;
     -webkit-hyphens: auto;
+    hyphenate-character: "-";
+    hyphenate-limit-chars: 6 3 3;
+    -webkit-hyphenate-limit-before: 3;
+    -webkit-hyphenate-limit-after: 3;
   }
 }
 
@@ -200,11 +205,16 @@ html[data-theme="dark"] .home-panel {
     color: var(--global-text-color-light);
     font-size: 0.92rem;
     line-height: 1.45;
+    word-spacing: -0.04em;
     text-align: justify;
     text-align-last: left;
     text-justify: inter-word;
     hyphens: auto;
     -webkit-hyphens: auto;
+    hyphenate-character: "-";
+    hyphenate-limit-chars: 6 3 3;
+    -webkit-hyphenate-limit-before: 3;
+    -webkit-hyphenate-limit-after: 3;
   }
 }
 

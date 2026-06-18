@@ -80,10 +80,10 @@
       </div>
     {% endif %}
 
-    {% if page.announcements and page.announcements.enabled %}
+    {% if page.news and page.news.enabled %}
       <div class="home-panel">
         <div class="home-panel__header">
-          <h2>Announcements</h2>
+          <h2>News</h2>
           <a href="{{ '/news/' | relative_url }}">View all news <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
         </div>
         {% include news.liquid limit=true %}
