@@ -1,8 +1,27 @@
 ---
 layout: about
-title: about
+title: Home
 permalink: /
 subtitle: <a href='https://www.sjtu.edu.cn/'>Shanghai Jiao Tong University (Graduated)</a>. Shanghai, China.
+homepage_variant: research-profile
+hero_status: Open to PhD opportunities
+hero_affiliation: Shanghai Jiao Tong University
+location: Shanghai, China
+degree: M.Eng. Energy and Power Engineering
+email: ningk.zhao@gmail.com
+scholar_url: https://scholar.google.com/citations?user=ZZ2FEfAAAAAJ&hl=en
+
+research_focus_intro: My research spans materials design, surface engineering, and oxidation resistance.
+research_focus:
+  - title: Accident tolerant fuel
+    icon: fa-solid fa-shield-halved
+    description: Developing advanced cladding and coatings to enhance the safety and reliability of nuclear fuel under accident conditions.
+  - title: Nanodiamond coatings
+    icon: fa-solid fa-braille
+    description: Fabrication and application of nanodiamond coatings for nuclear materials and extreme environments.
+  - title: Surface modification
+    icon: fa-solid fa-gears
+    description: Surface engineering for high-performance heat transfer and oxidation resistance enhancement.
 
 profile:
   align: right
@@ -18,12 +37,12 @@ social: false # includes social icons at the bottom of the page
 
 announcements:
   enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  scrollable: false # adds a vertical scroll bar if there are more than 3 news items
+  limit: 3 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
   enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
+  scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
 

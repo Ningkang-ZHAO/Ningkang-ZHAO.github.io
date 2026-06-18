@@ -2,18 +2,34 @@
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
-      {% if page.permalink != '/' %}
+      {% assign show_navbar_brand = true %}
+      {% if page.permalink == '/' and site.enable_home_navbar_brand == false %}
+        {% assign show_navbar_brand = false %}
+      {% endif %}
+      {% assign show_navbar_brand_text = true %}
+      {% if page.permalink == '/' and site.home_navbar_brand_logo_only %}
+        {% assign show_navbar_brand_text = false %}
+      {% endif %}
+
+      {% if show_navbar_brand %}
         <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
-          {% if site.first_name %}
-            {{- site.first_name -}}
+          {% if site.icon %}
+            {% if site.icon.size > 4 %}
+              <img class="navbar-brand-logo" src="{{ site.icon | prepend: '/assets/img/' | relative_url | bust_file_cache }}" alt="{{ site.title }}">
+            {% endif %}
           {% endif %}
-          {% if site.middle_name %}
-            {{- site.middle_name -}}
-          {% endif %}
-          {% if site.last_name %}
-            <span class="font-weight-bold">
-              {{- site.last_name | upcase -}}
-            </span>
+          {% if show_navbar_brand_text %}
+            {% if site.first_name %}
+              {{- site.first_name -}}
+            {% endif %}
+            {% if site.middle_name %}
+              {{- site.middle_name -}}
+            {% endif %}
+            {% if site.last_name %}
+              <span class="font-weight-bold">
+                {{- site.last_name | upcase -}}
+              </span>
+            {% endif %}
           {% endif %}
         </a>
       {% elsif site.enable_navbar_social %}

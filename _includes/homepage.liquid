@@ -1,0 +1,137 @@
+{% assign profile = page.profile %}
+
+<div class="home-profile">
+  <section class="home-hero">
+    <div class="home-hero__content">
+      <p class="home-eyebrow">{{ page.hero_status | default: 'Open to PhD opportunities' }}</p>
+      <h1 class="home-title">
+        {% if site.first_name %}{{ site.first_name }}{% endif %}
+        {% if site.middle_name %} {{ site.middle_name }}{% endif %}
+        {% if site.last_name %} {{ site.last_name }}{% endif %}
+      </h1>
+      <p class="home-affiliation">
+        <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+        {{ page.hero_affiliation | default: page.subtitle | strip_html }}
+      </p>
+      <div class="home-rule"></div>
+      <div class="home-summary justified-text">
+        {{ content }}
+      </div>
+    </div>
+
+    {% if profile %}
+      <aside class="home-card" aria-label="Profile summary">
+        {% if profile.image %}
+          {% assign profile_image_path = profile.image | prepend: 'assets/img/' %}
+          {% include figure.liquid loading="eager" path=profile_image_path class="home-card__image" sizes="280px" alt=profile.image cache_bust=true %}
+        {% endif %}
+        <div class="home-card__body">
+          {% if page.location %}
+            <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i>{{ page.location }}</p>
+          {% endif %}
+          {% if page.degree %}
+            <p><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>{{ page.degree }}</p>
+          {% endif %}
+          {% if page.email %}
+            <p>
+              <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+              <a href="mailto:{{ page.email }}">{{ page.email }}</a>
+            </p>
+          {% endif %}
+          {% if page.scholar_url %}
+            <p>
+              <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+              <a href="{{ page.scholar_url }}" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+            </p>
+          {% endif %}
+        </div>
+      </aside>
+    {% endif %}
+  </section>
+
+  {% if page.research_focus %}
+    <section class="home-focus" aria-labelledby="research-focus">
+      <div class="home-focus__intro">
+        <h2 id="research-focus">Research Focus</h2>
+        <p>{{ page.research_focus_intro | default: 'My research spans materials design, surface engineering, and thermal systems.' }}</p>
+      </div>
+      {% for item in page.research_focus %}
+        <article class="home-focus__item">
+          {% if item.icon %}
+            <i class="{{ item.icon }}" aria-hidden="true"></i>
+          {% endif %}
+          <div>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+          </div>
+        </article>
+      {% endfor %}
+    </section>
+  {% endif %}
+
+  <section class="home-grid">
+    {% if page.selected_papers %}
+      <div class="home-panel home-panel--papers">
+        <div class="home-panel__header">
+          <h2>Selected Papers</h2>
+          <a href="{{ '/publications/' | relative_url }}">View all publications <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        {% include selected_papers.liquid %}
+      </div>
+    {% endif %}
+
+    {% if page.announcements and page.announcements.enabled %}
+      <div class="home-panel">
+        <div class="home-panel__header">
+          <h2>Announcements</h2>
+          <a href="{{ '/news/' | relative_url }}">View all news <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        {% include news.liquid limit=true %}
+      </div>
+    {% endif %}
+
+    {% if page.latest_posts and page.latest_posts.enabled %}
+      <div class="home-panel">
+        <div class="home-panel__header">
+          <h2>Latest Posts</h2>
+          <a href="{{ '/blog/' | relative_url }}">View all posts <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        {% assign latest_posts_size = site.posts | size %}
+        {% if page.latest_posts.limit %}
+          {% assign latest_posts_limit = page.latest_posts.limit %}
+        {% else %}
+          {% assign latest_posts_limit = latest_posts_size %}
+        {% endif %}
+        <div class="home-posts">
+          {% for item in site.posts limit: latest_posts_limit %}
+            <article class="home-posts__item">
+              <time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: '%b %d, %Y' }}</time>
+              <div>
+                {% if item.redirect == blank %}
+                  <a class="home-posts__title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                {% elsif item.redirect contains '://' %}
+                  <a class="home-posts__title" href="{{ item.redirect }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
+                {% else %}
+                  <a class="home-posts__title" href="{{ item.redirect | relative_url }}">{{ item.title }}</a>
+                {% endif %}
+                {% if item.description %}
+                  <p>{{ item.description }}</p>
+                {% endif %}
+                {% if item.categories.size > 0 or item.tags.size > 0 %}
+                  <div class="home-posts__meta">
+                    {% for category in item.categories limit: 1 %}
+                      <span>{{ category }}</span>
+                    {% endfor %}
+                    {% for tag in item.tags limit: 1 %}
+                      <span>{{ tag }}</span>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  </section>
+</div>
