@@ -333,9 +333,12 @@ html[data-theme="dark"] .home-panel--posts {
       }
 
       .preview {
-        width: 100%;
+        display: block;
+        width: auto;
+        max-width: 100%;
+        height: auto;
         max-height: 7.1rem;
-        object-fit: cover;
+        object-fit: contain;
       }
     }
 

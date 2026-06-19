@@ -113,7 +113,7 @@ html {
 
     h3 {
       margin-bottom: 0.4rem;
-      font-size: 1.32rem;
+      font-size: 1rem;
       line-height: 1.32;
     }
 
@@ -161,9 +161,12 @@ html {
       }
 
       .preview {
-        width: 100%;
+        display: block;
+        width: auto;
+        max-width: 100%;
+        height: auto;
         max-height: 8.5rem;
-        object-fit: cover;
+        object-fit: contain;
       }
 
       .title {
@@ -204,6 +207,33 @@ html {
 
 html[data-theme="dark"] .publications ol.bibliography li .links a.btn:hover {
   background: rgba($cyan-color, 0.12);
+}
+
+img[data-zoomable] {
+  cursor: zoom-in;
+}
+
+.zoom-lightbox {
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1rem;
+  cursor: zoom-out;
+
+  img {
+    width: auto;
+    height: auto;
+    border-radius: 0.35rem;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.28);
+    object-fit: contain;
+  }
+}
+
+.zoom-lightbox-open {
+  overflow: hidden;
 }
 
 .projects {
@@ -315,7 +345,7 @@ html[data-theme="dark"] .publications ol.bibliography li .links a.btn:hover {
 
 @media (min-width: 1400px) {
   .post .post-title {
-    font-size: 2.75rem;
+    font-size: 2.25rem;
   }
 
   .post article.justified-text,
