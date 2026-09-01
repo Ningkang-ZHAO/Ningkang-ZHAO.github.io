@@ -86,8 +86,23 @@ layout: default
             {% endunless %}
           {% endif %}
           {% if data[0] == 'meta' or data[1].size == 0 %} {% continue %} {% endif %}
+          {% assign section_title = data[0] | capitalize %}
+          {% for custom_title in site.data.resume.meta.sectionTitles %}
+            {% if custom_title[0] == data[0] %}
+              {% assign section_title = custom_title[1] %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+          {% assign grouped_section = false %}
+          {% if site.data.resume.meta.groupedSections contains data[0] %}
+            {% assign grouped_section = true %}
+          {% endif %}
           <div class="card mt-3 p-3">
-            <h3 id="{{ data[0] }}" class="card-title font-weight-medium">{{ data[0] | capitalize }}</h3>
+            {% if grouped_section %}
+              <a class="anchor" id="{{ data[0] }}"></a>
+            {% else %}
+              <h3 id="{{ data[0] }}" class="card-title font-weight-medium">{{ section_title }}</h3>
+            {% endif %}
             <div class="justified-text">
               {% case data[0] %}
                 {% when 'basics' %}

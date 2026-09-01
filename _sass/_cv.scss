@@ -158,6 +158,45 @@ td.list-group-link {
   scroll-margin-top: 6rem;
 }
 
+/* Data-driven resume groups and entries. All colors follow the active theme. */
+.cv {
+  .resume-group-heading {
+    background: transparent;
+  }
+
+  .resume-group-title {
+    margin: 0;
+    padding: 0 0 0.45rem 0.75rem;
+    border-bottom: 1px solid var(--global-divider-color);
+    border-left: 3px solid var(--global-theme-color);
+    color: var(--global-theme-color);
+    font-size: 1.08rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  .resume-entry-title {
+    color: var(--global-text-color);
+
+    a {
+      color: var(--global-theme-color);
+    }
+  }
+
+  .resume-entry-summary {
+    margin-top: 0.2rem;
+    margin-bottom: 0.45rem;
+    color: var(--global-text-color-light);
+    font-size: 0.95rem;
+    font-style: italic;
+  }
+
+  .resume-entry-highlights,
+  .resume-entry-highlights .item {
+    color: var(--global-text-color);
+  }
+}
+
 ul.timeline {
   margin-top: 2rem;
   margin-bottom: 2rem;

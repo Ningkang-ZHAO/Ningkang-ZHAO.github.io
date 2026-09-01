@@ -1,30 +1,43 @@
 <ul class="card-text font-weight-light list-group list-group-flush">
+  {% assign current_section = '' %}
   {% for content in data[1] %}
+    {% if content.section and content.section != current_section %}
+      <li class="resume-group-heading list-group-item border-0 px-0 {% unless forloop.first %}pt-4{% endunless %} pb-0">
+        <h3 class="resume-group-title">{{ content.section }}</h3>
+      </li>
+      {% assign current_section = content.section %}
+    {% endif %}
     <li class="list-group-item">
       <div class="row">
-        <div class="col-xs-2 cl-sm-2 col-md-2 text-center date-column">
-          {% if content.startDate %}
-            {% assign startDate = content.startDate | split: '-' | slice: 0, 2 | join: '.' %}
-            {% assign endDate = content.endDate | split: '-' | slice: 0, 2 | join: '.' | default: 'Present' %}
-            {% assign date = startDate | append: ' - ' %}
-            {% assign date = date | append: endDate %}
-          {% else %}
-            {% assign date = '' %}
-          {% endif %}
-          <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px"> {{ date }} </span>
-        </div>
-        <div class="col-xs-10 cl-sm-10 col-md-10 mt-2 mt-md-0">
-          <h6 class="title font-weight-bold ml-1 ml-md-4">
-            <a href="{{ content.url }}">{{ content.name }}</a>
+        {% if content.startDate %}
+          {% assign startDate = content.startDate | split: '-' | slice: 0, 2 | join: '.' %}
+          {% assign endDate = content.endDate | split: '-' | slice: 0, 2 | join: '.' | default: 'Present' %}
+          {% assign date = startDate | append: ' - ' | append: endDate %}
+          <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column">
+            <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">{{ date }}</span>
+          </div>
+          {% assign content_columns = 'col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0' %}
+        {% else %}
+          {% assign content_columns = 'col-12' %}
+        {% endif %}
+        <div class="{{ content_columns }}">
+          <h6 class="resume-entry-title title font-weight-bold {% if content.startDate %}ml-1 ml-md-4{% endif %}">
+            {% if content.url and content.url != '' %}
+              <a href="{{ content.url }}">{{ content.name }}</a>
+            {% else %}
+              {{ content.name }}
+            {% endif %}
           </h6>
-          <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ content.summary }}</h6>
-          <ul class="items">
-            {% for item in content.highlights %}
-              <li>
-                <span class="item">{{ item }}</span>
-              </li>
-            {% endfor %}
-          </ul>
+          {% if content.summary %}
+            <p class="resume-entry-summary {% if content.startDate %}ml-1 ml-md-4{% endif %}">{{ content.summary }}</p>
+          {% endif %}
+          {% if content.highlights and content.highlights.size > 0 %}
+            <ul class="resume-entry-highlights items">
+              {% for item in content.highlights %}
+                <li><span class="item">{{ item }}</span></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
         </div>
       </div>
     </li>
